@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D5033B34-3954-4ADE-9FBD-68F842DE48D4}</ProjectGuid>
-    <RootNamespace>统计某类完全平方数</RootNamespace>
+    <ProjectGuid>{F3FE9E2E-432A-49FC-9387-27B89BAA6A63}</ProjectGuid>
+    <RootNamespace>求自定类型元素序列的中位数</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -66,6 +66,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="code.cpp" />
+    <ClCompile Include="median.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="median.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
