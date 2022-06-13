@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+
+void transform(int N);
+int main()
+{
+	int N;
+	scanf("%d", &N);
+	transform(N);
+	return 0;
+}
+
+void transform(int N)
+{
+	int x = N, X = 0;
+	while (x != 0)
+	{
+		x /= 10;
+		X++;
+	}
+	int arr[9], u = 1;
+	for (int i = 0; i<X - 1; i++)
+		u *= 10;
+	arr[0] = N / u;
+	if (N > 9)
+	{
+		for (int i = 1; i < X; i++)
+		{
+			int v = 1;
+			for (int j = 1; j < X - i; j++)
+				v *= 10;
+			arr[i] = N / v % 10;
+		}
+
+	}
+	char Num[10] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+	char Unit[5] = { 'S', 'B', 'Q', 'W', 'Y' };
+
+	x = X; int  t = N;
+	for (int i = 0; i < X-1; i++)
+	{
+		if (X <= 4 && X > 1)
+		{
+			if (arr[i] != 0)
+			{
+				printf("%c%c", Num[arr[i]], Unit[i]);
+				x--;
+			}
+			else printf("%c", Num[0]);
+		}
+
+	}
+	if (arr[X - 1] != 0)
+		printf("%c", Num[arr[x]]);
+	else 0;
+}
